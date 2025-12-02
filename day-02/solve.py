@@ -52,7 +52,8 @@ def solution2(data):
     for slice in parse_data(data):
         for val in range(*slice):
             num_characters = len(str(val))
-            # Check if there is a repeating pattern by 2 in the value
+
+            # Check if there is any form of repeating pattern in the string
             pattern = (
                 r"(\d{1,"
                 + f"{num_characters}"
