@@ -8,6 +8,8 @@ def get_python_file_content(day):
 
     return f"""\"\"\"Day {day} Puzzle Solution\"\"\"
 
+import argparse
+
 
 def solution1(data):
     \"\"\"Solution to part 1\"\"\"
@@ -22,8 +24,15 @@ def solution2(data):
 
 
 if __name__ == "__main__":
+    # Parse arguments
+    parser = argparse.ArgumentParser()
+    parser.add_argument("-d", "--debug", action="store_true")
+    args = parser.parse_args()
+
+    filename = "day-{day}/input.txt" if not args.debug else "day-{day}/example_input.txt"
+
     # Read the input file
-    with open("day-{day}/input.txt", "r", encoding="utf-8") as f:
+    with open(filename, "r", encoding="utf-8") as f:
         DATA = f.readlines()
 
     answ1 = solution1(DATA)
