@@ -33,12 +33,12 @@ if __name__ == "__main__":
 
     # Read the input file
     with open(filename, "r", encoding="utf-8") as f:
-        DATA = f.readlines()
+        data = f.readlines()
 
-    answ1 = solution1(DATA)
+    answ1 = solution1(data)
     print(f"Solution 1: {{answ1}}")
 
-    answ2 = solution2(DATA)
+    answ2 = solution2(data)
     print(f"Solution 2: {{answ2}}")
 """
 
