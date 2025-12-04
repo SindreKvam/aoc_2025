@@ -6,7 +6,7 @@ import numpy as np
 
 
 def parse_data_to_np_array(data) -> np.ndarray:
-    # Add a grid of zeros around the entire board, to not have to wory about edge cases
+    # Add a grid of zeros around the entire board, to not have to worry about edgecases
     arr = np.zeros((len(data) + 2, len(data[0]) + 2), dtype=int)
 
     for idx, _ in enumerate(data, start=1):
