@@ -54,7 +54,6 @@ def solution2(data):
         # Beam starts from S indicator
         start_index = line.find("S")
         if start_index != -1:
-            # beam_indexes.append(start_index)
             beams[f"{start_index}"] += 1
 
         split_index = list(findall("^", line))
